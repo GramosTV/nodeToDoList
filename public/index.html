@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content=Both>
+    <title>MegaToDoList</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+</head>
+<body>
+<div class="circles">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<h1>Mega To Do List</h1>
+<div class="flex-container">
+<form>
+    <div class="title">Welcome</div>
+    <div class="subtitle">Let's create a new task!</div>
+    <div class="input-container ic1">
+    <input class="input" type="text" id="taskInput" name="New Task" placeholder=" ">
+        <div class="cut"></div>
+        <label for="taskInput" class="placeholder">New Task</label>
+    </div>
+    <div class="input-container ic2 description">
+        <textarea class="input" placeholder=" " name="Description" id="taskInput2" cols="30" rows="10"></textarea>
+        <div class="cut"></div>
+        <label for="taskInput2" class="placeholder">Description:</label>
+    </div>
+
+    <div class="input-container ic2">
+    <input class="input" type="text" id="taskInput3" name="Youtube Video (optional)" placeholder=" ">
+        <div class="cut cut-big"></div>
+        <label for="taskInput3" class="placeholder">Youtube Video (optional)</label>
+        </div>
+    <div class="input-container ic2">
+        <input class="input" type="date" max="2077-12-31" id="taskInput4" name="Needs to be done till:" placeholder=" ">
+        <div class="cut cut-big2"></div>
+        <label for="taskInput4" class="placeholder">Needs to be done till:</label>
+    </div>
+    <div class="input-container ic2 important">
+        <input class="input" type="checkbox" id="taskInput5" name="Especially Important" placeholder=" ">
+        <div class="cut cut-big2"></div>
+        <label for="taskInput5" class="placeholder">Especially Important</label>
+    </div>
+    <br>
+    <button id="newTask" type="submit" class="submit">New Task</button>
+</form>
+<div class="container">
+<div id="counter"></div>
+<ul>
+</ul>
+</div>
+    <div class="sort-filter-container">
+        <span class="sortBtn on">Sort</span>
+        <span class="filterBtn">Filter</span>
+        <div class="sort-filter">
+            <div class="sorter">
+                <h3>Select your sorting preferences
+                    <br> (important is priority)
+                </h3>
+                <label for="sort-select">Age sorting</label>
+                <div class="select select__wrapper">
+                <select name="sorter" id="sort-select">
+                    <option value="newest">Newest</option>
+                    <option value="oldest">Oldest</option>
+                </select>
+                </div>
+                <label for="sort-select2">State sorting</label>
+                <div class="select select__wrapper">
+                <select name="sorter" id="sort-select2">
+                    <option value="not-done">Not Done</option>
+                    <option value="done">Done</option>
+                </select>
+                </div>
+            </div>
+            <div class="filter">
+                <h3>Select your filtering preferences</h3>
+                <label for="filter-select">Only done or not done tasks</label>
+                <div class="select select__wrapper">
+                <select name="filter" id="filter-select">
+                    <option value="">Both</option>
+                    <option value="not-done">Not Done</option>
+                    <option value="done">Done</option>
+                </select>
+                </div>
+                <label for="filter-select2">Only with or without videos tasks</label>
+                <div class="select select__wrapper">
+                <select name="filter" id="filter-select2">
+                    <option value="">Both</option>
+                    <option value="with-video">With Video</option>
+                    <option value="without-video">Without Video</option>
+                </select>
+                </div>
+                <label for="filter-checkbox">Only important tasks</label>
+                <input type="checkbox" id="filter-checkbox">
+                <label for="dateFilter">To be done on:</label>
+                <input id='dateFilter' type="date" max="2077-12-31" name="To be done on:" placeholder=" "><button id="dateReset">Reset</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/script.js"></script>
+</body>
+</html>
