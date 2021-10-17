@@ -291,6 +291,11 @@ li {
       }
       @media (max-width: 1210px) {
         width: 100%;
+        height: 255px;
+        margin-bottom: 6px;
+      }
+      @media (max-width: 600px) {
+        width: 100%;
         height: 175px;
         margin-bottom: 6px;
       }
